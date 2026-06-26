@@ -15,7 +15,7 @@ def classify_server_health(cpu_percent, memory_percent, response_time_ms):
         raise ValueError(f"response_time_ms must be non-negative, got {response_time_ms}")
 
     if cpu_percent > 90 or memory_percent > 90 or response_time_ms > 5000:
-        return "WARNING"
+        return "CRITICAL"
     if cpu_percent > 70 or memory_percent > 70 or response_time_ms > 2000:
-        return "HEALTHY"
-    return "CRITICAL"
+        return "WARNING"
+    return "HEALTHY"
