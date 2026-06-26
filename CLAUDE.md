@@ -33,10 +33,13 @@ Run tests with:
 ## Docker
 `Dockerfile` — `python:3.11-slim`, copies src + tests, `CMD ["pytest", "tests/", "-v"]`.
 
-## Evidence still needed
-- Screenshot: tests passing locally
-- Screenshot: tests failing (temporarily break component, run tests, revert)
-- Screenshot: Jenkins failed build (broken code)
-- Screenshot: Jenkins successful build (fixed code)
-- Screenshot: `docker build` output
-- Screenshot: `docker run` output (tests passing inside container)
+## Evidence status
+- [x] Screenshot: tests passing locally
+- [x] Screenshot: tests failing (temporarily broke component via swapped return values, commit `cad6dda`)
+- [x] Screenshot: Jenkins failed build (broken code)
+- [x] Screenshot: Jenkins successful build (reverted code, commit `189b678`)
+- [x] Screenshot: `docker build` output
+- [x] Screenshot: `docker run` output (tests passing inside container)
+
+## Remaining work
+- [ ] Written DevOps report/explanation
